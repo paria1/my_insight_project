@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-PyQt5==5.15
+# PyQt5==5.15
 pytest-filter-subpackage
 pyqtwebengine
 altair==4.0.0
