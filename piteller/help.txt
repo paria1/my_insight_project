@@ -1,0 +1,19 @@
+ssh -i "insight_streamlit_key.pem" ec2-user@ec2-34-222-20-109.us-west-2.compute.amazonaws.com
+sudo yum install python36
+sudo yum install git
+
+https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html
+
+https://towardsdatascience.com/how-to-deploy-a-streamlit-app-using-an-amazon-free-ec2-instance-416a41f69dc3
+
+
+
+local: http://192.168.1.157:8502/
+https://github.com/andfanilo/regression-streamlit-viz
+streamlit run app.py
+
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html
