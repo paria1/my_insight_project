@@ -13,11 +13,12 @@ data = pd.read_csv("Data Clean.csv")
 # image = Image.open("house.png")
 image = Image.open("online-shopping.jpg")
 
-st.title("Welcome to the House Price Prediction App")
+st.title("Welcome to the PITeller")
 st.image(image, use_column_width=True)
 
 #checking the data
-st.write("This is an application for knowing how much range of house prices you choose using machine learning. Let's try and see!")
+st.write("Do you want to learn more about your customer shopping behavior? PITeller has the answer for you!")
+st.write("Don't you believe that? Let's try and see!")
 check_data = st.checkbox("See the simple data")
 if check_data:
     st.write(data.head())
