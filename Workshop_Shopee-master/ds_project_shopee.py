@@ -18,7 +18,7 @@ st.image(image, use_column_width=True)
 
 #checking the data
 st.write("Do you want to learn more about your customer shopping behavior? PITeller has the answer for you!")
-st.write("Don't you believe that? Let's try and see!")
+st.markdown("Don't you believe that? Let's try and see!")
 check_data = st.checkbox("See the simple data")
 if check_data:
     st.write(data.head())
