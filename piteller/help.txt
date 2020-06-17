@@ -1,6 +1,104 @@
-ssh -i "insight_streamlit_key.pem" ec2-user@ec2-34-222-20-109.us-west-2.compute.amazonaws.com
+https://us-east-1.signin.aws.amazon.com/oauth?response_type=code&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fnc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgs%2523%26isauthcode%3Dtrue&forceMobileLayout=0&forceMobileApp=0&code_challenge=mW8sYLc27k-6XkJhuc-z2nSmcJo2oOKRJYqKUDriti0&code_challenge_method=SHA-256
+
+## ssh to vm:
+ssh -i "paria_insight.pem" ec2-user@ec2-54-245-191-144.us-west-2.compute.amazonaws.com
+
+
+
+
+
+
+
+
+
+####### Fisrt time
+## install minoconda
+sudo apt-get update
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p ~/miniconda
+echo "PATH=$PATH:$HOME/miniconda/bin" >> ~/.bashrc
+source ~/.bashrc
+
+
+
+
+
+yum install gcc openssl-devel bzip2-devel libffi-devel
+cd /opt
+sudo wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+sudo tar xzf Python-3.7.7.tgz
+cd Python-3.7.7
+sudo ./configure --enable-optimizations
+sudo make altinstall
+sudo rm /usr/src/Python-3.7.7.tgz
+
+
+
+
+
+
+
 sudo yum install python36
 sudo yum install git
+
+
+https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html
+
+https://towardsdatascience.com/how-to-deploy-a-streamlit-app-using-an-amazon-free-ec2-instance-416a41f69dc3
+
+
+
+local: http://192.168.1.157:8502/
+https://github.com/andfanilo/regression-streamlit-viz
+streamlit run app.py
+
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html
+
+
+
+
+
+
+https://us-east-1.signin.aws.amazon.com/oauth?response_type=code&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fnc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgs%2523%26isauthcode%3Dtrue&forceMobileLayout=0&forceMobileApp=0&code_challenge=mW8sYLc27k-6XkJhuc-z2nSmcJo2oOKRJYqKUDriti0&code_challenge_method=SHA-256
+
+## shh to vm:
+ssh -i "insight_streamlit_key.pem" ec2-user@ec2-34-219-107-225.us-west-2.compute.amazonaws.com
+ssh -i "paria_insight.pem" ec2-user@ec2-54-245-191-144.us-west-2.compute.amazonaws.com
+
+####### Fisrt time
+## install minoconda
+sudo apt-get update
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p ~/miniconda
+echo "PATH=$PATH:$HOME/miniconda/bin" >> ~/.bashrc
+source ~/.bashrc
+
+
+
+
+
+yum install gcc openssl-devel bzip2-devel libffi-devel
+cd /opt
+sudo wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+sudo tar xzf Python-3.7.7.tgz
+cd Python-3.7.7
+sudo ./configure --enable-optimizations
+sudo make altinstall
+sudo rm /usr/src/Python-3.7.7.tgz
+
+
+
+
+
+
+
+sudo yum install python36
+sudo yum install git
+
 
 https://blog.jcharistech.com/2019/10/29/how-to-deploy-streamlit-apps-on-aws-ec2/
 
