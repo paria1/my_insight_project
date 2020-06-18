@@ -37,35 +37,53 @@ st.write("Now let's find about  Customer Purchase Intention!")
 
 
 #input the numbers
-pagevalues = st.slider("What is the page value from google analytics?"
-    ,int(data1.PageValues.min())
-    ,int(data1.PageValues.max())
-    ,int(data1.PageValues.mean()) )
+# pagevalues  = st.slider('What is the page value from google analytics?'
+# , float(data1.PageValues.min())
+# , float(data1.PageValues.max()), float(data1.PageValues.mean()))
 
-exitrates = st.slider("What is the exit rates from google analytics?"
-    ,float(data1.ExitRates.min())
-    ,float(data1.ExitRates.max())
-    ,float(data1.ExitRates.mean()) )
+# exitrates = st.slider("What is the exit rates from google analytics?"
+#     ,float(data1.ExitRates.min())
+#     ,float(data1.ExitRates.max())
+#     ,float(data1.ExitRates.mean()) )
+
+# exitrates = st.slider("What is the exit rates from google analytics?"
+#     ,float(data1.ExitRates.min())
+#     ,float(data1.ExitRates.max())
+#     ,float(data1.ExitRates.mean()) )
 
 
+st.write("paria")
 
+pagevalues  = st.slider('What is the page value from google analytics?', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
+exitrates  = st.slider('What is the exit rates from google analytics?', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
+administrative_duration  = st.slider('administrative_duration', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
+productrelated_duration  = st.slider('productrelated_duration', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
+bouncerates  = st.slider('bouncerates', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
+productrelated  = st.slider('productrelated', float(data1.PageValues.min()), float(data1.PageValues.max()), float(data1.PageValues.mean()))
 
+st.write([pagevalues,exitrates,administrative_duration,productrelated_duration,bouncerates,productrelated])
 
 #splitting your data
 
 
 ## My Ml Models
 clf_rf_f = load('clf_rf_f.joblib')
-predictions = clf_rf_f.predict([[pagevalues,exitrates]])[0]
+## add features here
+## read list of features
+# with open(STREAMLIT_FLODER + "list_of_features.json", 'r') as f:
+#     list_of_features = json.load(f)
+st.write([pagevalues,exitrates,administrative_duration,productrelated_duration,bouncerates,productrelated])
+# predictions = clf_rf_f.predict([[pagevalues,exitrates]])[0]
+# predictions = clf_rf_f.predict([[pagevalues,exitrates,administrative_duration,productrelated_duration,bouncerates,productrelated]])[0]
 
 
 #checking prediction house price
-if st.button("Run me!"):
-    st.header("The Customer Most Probably ")
-    if predictions ==1:
-        st.header("BUYS")
-    if predictions ==0:
-        st.header("DOES NOT BUY")
+# if st.button("Run me!"):
+#     st.header("The Customer Most Probably ")
+#     if predictions ==1:
+#         st.header("BUYS")
+#     if predictions ==0:
+#         st.header("DOES NOT BUY")
     
     #.format(int(predictions)))
     #st.subheader("Your range of prediction is USD {} - USD {}".format(int(predictions-errors),int(predictions+errors) ))
