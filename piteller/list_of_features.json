@@ -1,0 +1,23 @@
+[
+    "pagevalues",
+    "exitrates",
+    "administrative_duration",
+    "productrelated_duration",
+    "bouncerates",
+    "productrelated",
+    "month_Jan",
+    "month_Feb",
+    "month_Mar",
+    "month_Apr",
+    "month_May",
+    "month_Jun",
+    "month_Jul",
+    "month_Aug",
+    "month_Sep",
+    "month_Oct",
+    "month_Nov",
+    "month_Dec",
+    "visitortype_New_Visitor",
+    "visitortype_Returning_Visitor",
+    "visitortype_Unkown"
+]
